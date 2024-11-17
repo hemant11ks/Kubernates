@@ -1,0 +1,65 @@
+KUBERANETES:
+
+Also known as K8s, it is an open source system for:
+1. Automating Deployment
+2. Management of Containerized apps
+3. Scaling
+
+-> It support different infrastructure.
+-> It is developed by GOOGLE and now it is maintained by Cloud Native Computing Foundation (CNCF).
+
+
+What is container orchestration?
+-> K8 is like a master who manages slaves(containers) how to perform.
+
+What is pod?
+-> A single instance of a running process in a cluster.
+-> It can run one or more containers and share the same resources.
+
+Components of Master Node:
+
+API SERVER
+Schedular              assign node to newly created Pods
+ETCD                   key-value store, having all cluster data
+Control Manager        responsible for managing the state of the cluster
+
+
+Component of Worker Node:
+
+kubelet                 Agent, make sure containers running in pods
+
+                        POD, Container run in a pod
+kube-proxy              Maintains network rules for comm with pods
+container-runtime      A tool responsible for running containers
+
+Features of Kubernetes:
+
+1. Container Orchestration
+2. Scalability
+3. Load Balancing
+4. Rollouts and Rollback
+5. High Availability
+
+Example there is a container and I need to initialize pod for that.
+Basically it take docker image form docker hub and run in a pod.
+
+Sample yamlConfig file,,,
+
+apiVersion: v1
+kind: Pod
+metadata:
+   name: my-pod
+spec:
+   containers:
+     - name: my-container
+       image: nginx
+       ports:
+     - containerPort: 80
+
+
+
+
+ 
+
+
+
